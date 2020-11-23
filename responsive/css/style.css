@@ -718,10 +718,6 @@ button {
 
 
     /* HISTORY */
-    .footer__inner-mobile {
-        display: none;
-    }
-
     .history__inner {
         padding: 40px 0px 20px 0px;
     }
