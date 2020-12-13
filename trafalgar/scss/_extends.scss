@@ -1,0 +1,19 @@
+%button {
+    padding: 20px 40px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 55px;
+    color: $btn-color;
+
+    border: 1.4px solid $btn-color;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+
+    transition: all .3s;
+}
+
+%button-hover {
+    background-color: $btn-color;
+    color: #fff;
+}

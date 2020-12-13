@@ -1,0 +1,117 @@
+@import "vars";
+@import "extends";
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: $accent-font;
+    color: $accent-color;
+}
+
+.container {
+    width: 1250px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 56px;
+    color: #000000;
+}
+
+.header {
+    padding-top: 55px;
+    
+    &__inner {
+        position: relative;
+    }
+
+    &__dots {
+        position: absolute;
+        top: 130px;
+        left: -230px;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding-bottom: 80px;
+    }
+
+    &__logo {
+        display: block;
+    }
+
+    &__menu {
+        display: flex;
+    }
+
+    &__item {
+        margin-right: 40px;
+        transition: all .3s;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover {
+            color: darken($accent-color, 70%);
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        position: relative;
+
+        &-left {
+            width: 40%;
+        }
+        
+        &-title {
+            font-size: 48px;
+            margin-bottom: 25px;
+        }
+
+        &-text {
+            font-weight: 300;
+            font-size: 21px;
+            line-height: 32px;
+            margin-bottom: 45px;
+        }
+
+        &-btn {
+            @extend %button;
+
+            &:hover {
+                @extend %button-hover;
+            }
+        }
+
+        &-img {
+            // display: block;
+            position: relative;
+            right: -30px;
+            top: 0;
+        }
+    }
+}
+
+
