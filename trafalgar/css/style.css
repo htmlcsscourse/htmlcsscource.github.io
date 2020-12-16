@@ -1,5 +1,6 @@
-.header__bottom-btn, .service__btn, .provider__item-btn {
-  padding: 20px 40px;
+.header__bottom-btn, .service__btn, .provider__item-btn, .info__btn {
+  padding: 18px 0px;
+  width: 200px;
   font-weight: bold;
   font-size: 18px;
   border-radius: 55px;
@@ -11,7 +12,7 @@
   transition: all .3s;
 }
 
-.header__bottom-btn:hover, .service__btn:hover, .provider__item-btn:hover {
+.header__bottom-btn:hover, .service__btn:hover, .provider__item-btn:hover, .info__btn:hover {
   background-color: #458FF6;
   color: #fff;
 }
@@ -32,6 +33,7 @@ ul {
 body {
   font-family: "Mulish";
   color: #7D7987;
+  overflow-x: hidden;
 }
 
 .container {
@@ -213,7 +215,7 @@ body {
 }
 
 .provider {
-  padding: 120px 0 250px;
+  padding: 120px 0 150px;
 }
 
 .provider__inner {
@@ -249,6 +251,7 @@ body {
 .provider__item-btn--download {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .provider__item-btn--download > span {
@@ -290,4 +293,202 @@ body {
 .provider__item .title::after {
   content: "";
   left: 28px;
+}
+
+.feedback {
+  padding: 100px 0;
+}
+
+.feedback__inner {
+  padding: 0 60px;
+}
+
+.feedback__block {
+  padding: 65px 120px 80px;
+  background: linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%);
+  border-radius: 24px;
+}
+
+.feedback__title {
+  text-align: center;
+  line-height: 48px;
+  color: #FFFFFF;
+  margin-bottom: 90px;
+}
+
+.feedback .title::after {
+  background-color: #FFFFFF;
+}
+
+.feedback__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedback__item-img {
+  border-radius: 50%;
+  border: 5px solid #fff;
+  margin-right: 30px;
+}
+
+.feedback__item > div {
+  margin-right: 110px;
+  color: #FFFFFF;
+}
+
+.feedback__item-name {
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.feedback__item-position {
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.feedback__item-text {
+  width: 420px;
+  font-size: 19px;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.feedback__left-btn {
+  background-color: transparent;
+}
+
+.info {
+  padding: 100px 0;
+}
+
+.info__title {
+  text-align: center;
+}
+
+.info__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  padding: 0 50px;
+  margin-bottom: 70px;
+}
+
+.info__item {
+  border-radius: 20px;
+  background: #FFFFFF;
+  box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+}
+
+.info__item-img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.info__item-bottom {
+  padding: 25px 50px 35px 35px;
+}
+
+.info__item-title {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 32px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.info__item-text {
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 25px;
+}
+
+.info__item-link {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 28px;
+  color: #4089ED;
+  position: relative;
+}
+
+.info__item-link::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/info/arrow.svg");
+  width: 15px;
+  height: 10px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  top: 8px;
+  right: -30px;
+}
+
+.info__btn {
+  display: block;
+  margin: 0 auto;
+}
+
+.footer {
+  padding: 125px 0 115px;
+  background: linear-gradient(183.41deg, #67C3F3 -8.57%, #5A98F2 82.96%);
+}
+
+.footer__inner {
+  display: flex;
+  position: relative;
+}
+
+.footer__copyright {
+  width: 50%;
+  font-weight: 300;
+  color: #FFFFFF;
+  line-height: 28px;
+}
+
+.footer__copyright-logo {
+  margin-bottom: 15px;
+}
+
+.footer__copyright-text {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.footer__copyright-right {
+  font-size: 16px;
+}
+
+.footer__menu {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.footer__menu-item {
+  color: #FFFFFF;
+}
+
+.footer__menu-item p {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 60px;
+}
+
+.footer__menu-item li {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 38px;
+}
+
+.footer__dots-right {
+  position: absolute;
+  top: -200px;
+  right: -50px;
+}
+
+.footer__dots-left {
+  position: absolute;
+  bottom: -115px;
+  left: -150px;
 }
