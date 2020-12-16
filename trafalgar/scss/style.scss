@@ -382,6 +382,11 @@ body {
 
 .info {
     padding: 100px 0;
+
+    &__inner {
+        position: relative;
+    }
+
     &__title {
         text-align: center;
     }
@@ -452,6 +457,22 @@ body {
 
         &:hover {
             @extend %button-hover;
+        }
+    }
+
+    &__bg {
+        &-dots {
+            position: absolute;
+            top: 60px;
+            left: 15px;
+            z-index: -1;
+        }
+
+        &-drop {
+            position: absolute;
+            top: 60px;
+            right: -470px;
+            z-index: -1;
         }
     }
 }

@@ -363,6 +363,10 @@ body {
   padding: 100px 0;
 }
 
+.info__inner {
+  position: relative;
+}
+
 .info__title {
   text-align: center;
 }
@@ -427,6 +431,20 @@ body {
 .info__btn {
   display: block;
   margin: 0 auto;
+}
+
+.info__bg-dots {
+  position: absolute;
+  top: 60px;
+  left: 15px;
+  z-index: -1;
+}
+
+.info__bg-drop {
+  position: absolute;
+  top: 60px;
+  right: -470px;
+  z-index: -1;
 }
 
 .footer {
