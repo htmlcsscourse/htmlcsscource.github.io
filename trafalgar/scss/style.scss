@@ -225,6 +225,17 @@ body {
 .provider {
     padding: 120px 0 250px;
 
+    &__inner {
+        position: relative;
+
+        &-dots {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -30%;
+        }
+    }
+
     &__list {
         display: grid;
         gap: 200px;

@@ -216,6 +216,17 @@ body {
   padding: 120px 0 250px;
 }
 
+.provider__inner {
+  position: relative;
+}
+
+.provider__inner-dots {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -30%;
+}
+
 .provider__list {
   display: grid;
   gap: 200px;
