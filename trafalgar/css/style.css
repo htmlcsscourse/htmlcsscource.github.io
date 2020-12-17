@@ -597,7 +597,7 @@ body {
 }
 
 .footer__menu-item {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .footer__menu-item p {
@@ -610,6 +610,11 @@ body {
   font-weight: 300;
   font-size: 18px;
   line-height: 38px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer__menu-item li:hover {
+  color: white;
 }
 
 .footer__dots-right {

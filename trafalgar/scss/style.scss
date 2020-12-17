@@ -638,7 +638,7 @@ body {
         justify-content: space-around;
 
         &-item {
-            color: #FFFFFF;
+            color: #ffffff;
 
             p {
                 font-weight: bold;
@@ -650,6 +650,11 @@ body {
                 font-weight: 300;
                 font-size: 18px;
                 line-height: 38px;
+                color:rgba(255, 255, 255, 0.7);
+
+                &:hover {
+                    color:rgb(255, 255, 255);
+                }
             }
         }
     }
