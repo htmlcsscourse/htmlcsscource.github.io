@@ -85,15 +85,33 @@ body {
     }
 
     &__item {
-        margin-right: 40px;
+        margin-right: 50px;
         transition: all .3s;
+        position: relative;
 
         &:last-child {
             margin-right: 0;
+
+            &::after {
+                content: "";
+                display: none;
+            }
         }
 
         &:hover {
-            color: darken($accent-color, 70%);
+            color: #428df5;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            top: 6px;
+            right: -27px;
+            
+            background-color: #d5e7fd;
+            border-radius: 50%;
         }
     }
 
@@ -106,7 +124,6 @@ body {
 
         &-left {
             width: 40%;
-
         }
 
         // Переопределил частично глобальные свойства для этого класса
@@ -193,6 +210,7 @@ body {
         box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
         background: #FFFFFF;
         border-radius: 20px;
+        transition: all .3s;
 
         &-title {
             font-weight: bold;
@@ -205,6 +223,11 @@ body {
             @extend .text;
             font-size: 16px;
             line-height: 28px;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background: #9bd4ffb4;
         }
     }
 
@@ -325,6 +348,7 @@ body {
         padding: 65px 120px 80px;
         background: linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%);
         border-radius: 24px;
+        margin-bottom: 40px;
     }
 
     &__title {
@@ -339,12 +363,98 @@ body {
         background-color: #FFFFFF;;
     }
 
+    // Slick
+    .slick {
+        &-track {
+            display: flex;
+        }
+
+        &-list {
+            overflow: hidden;
+        }
+
+        
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s;
+
+        .slick {
+            &-arrow {
+                width: 28px;
+                height: 18px;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                cursor: pointer;
+            }
+    
+            &-prev,
+            &-next {
+                background-position: center center;
+                background-repeat: no-repeat;
+    
+            }
+    
+            &-prev {
+                left: 0;
+                background-image: url('../img/feedback/arrow-l.svg');
+            }
+    
+            &-next {
+                right: 0;
+                background-image: url('../img/feedback/arrow-r.svg');
+            }
+
+            &-disabled {
+                opacity: 0.5;
+            }
+
+            &-dots {
+                display: flex;
+                margin: 0 90px;
+                height: 28px;
+                
+                .slick-active {
+                    button {
+                        background-color: #5B9BF3;
+                    }
+                }
+                
+                li {
+                    min-width: 0;
+                    margin-right: 10px;
+    
+                    &:last-child {
+                        margin-right: 0;
+                    }
+    
+                    button {
+                        font-size: 0;
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 50%;
+                        background-color: #5b9af36e;
+                        border: none;
+                        outline: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
     &__item {
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
 
         &-img {
+            width: 120px;
             border-radius: 50%;
             border: 5px solid #fff;
 
@@ -404,6 +514,8 @@ body {
         border-radius: 20px;
         background: #FFFFFF;
         box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+        opacity: .7;
+        transition: all 0.3s;
 
         &-img {
             border-top-left-radius: 20px;
@@ -429,6 +541,7 @@ body {
         }
 
         &-link {
+            display: block;
             font-weight: 600;
             font-size: 17px;
             line-height: 28px;
@@ -443,9 +556,20 @@ body {
                 height: 10px;
                 background-position: 0 0;
                 background-repeat: no-repeat;
+                top: 10px;
+                left: 100px;
+                transition: .3s;
+            }
+        }
+        
+        &:hover {
+            cursor: pointer;
+            //box-shadow: 0px 0px 20px #459cf800;
+            opacity: 1;
 
-                top: 8px;
-                right: -30px;
+            ::after {
+                transform: translateX(10px);
+                transition: .5s;
             }
         }
     }
