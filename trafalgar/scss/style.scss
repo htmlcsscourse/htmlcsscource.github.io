@@ -372,8 +372,6 @@ body {
         &-list {
             overflow: hidden;
         }
-
-        
     }
 
     &__nav {
@@ -564,7 +562,6 @@ body {
         
         &:hover {
             cursor: pointer;
-            //box-shadow: 0px 0px 20px #459cf800;
             opacity: 1;
 
             ::after {
@@ -613,7 +610,6 @@ body {
 
     &__copyright {
         width: 50%;
-        // margin-right: 150px;
         font-weight: 300;
         color: #FFFFFF;
         line-height: 28px;
