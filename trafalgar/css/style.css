@@ -541,6 +541,10 @@ body {
   transition: .5s;
 }
 
+.info__item--hide {
+  display: none;
+}
+
 .info__btn {
   display: block;
   margin: 0 auto;
@@ -629,6 +633,15 @@ body {
   left: -150px;
 }
 
+@keyframes showBlock {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .btn__go-top {
   position: fixed;
   display: none;
@@ -637,9 +650,9 @@ body {
   padding: 35px;
   background-color: #f0f0f05b;
   border-radius: 50%;
-  cursor: pointer;
   outline: none;
   border: none;
+  cursor: pointer;
   transition: all .3s;
   background-image: url("../img/rocket.svg");
   background-repeat: no-repeat;
@@ -655,6 +668,17 @@ body {
   background-size: 55px, 12px;
 }
 
+@keyframes showBlock {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .btn__go-top--show {
   display: block;
+  transition: all .3s;
+  animation: showBlock 1s linear forwards;
 }
