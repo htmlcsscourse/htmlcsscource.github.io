@@ -633,15 +633,6 @@ body {
   left: -150px;
 }
 
-@keyframes showBlock {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .btn__go-top {
   position: fixed;
   display: none;
