@@ -14,9 +14,8 @@ btnGoTop.addEventListener('click', () => window.scrollTo({
     behavior: 'smooth',
 }));
 
-
 // When the user scrolls down 400px from the top of the document, show the button
-window.onscroll = function () { scrollFunction(); };
+window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
     console.log(1);
