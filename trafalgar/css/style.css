@@ -115,7 +115,7 @@ body {
 }
 
 .header__item:hover {
-  color: #428df5;
+  color: #3975c8;
 }
 
 .header__item::after {
@@ -627,4 +627,36 @@ body {
   position: absolute;
   bottom: -115px;
   left: -150px;
+}
+
+.btn__go-top {
+  position: fixed;
+  display: none;
+  left: 20px;
+  bottom: 50px;
+  padding: 35px;
+  background-color: #f0f0f05b;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  transition: all .3s;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/rocket.svg");
+  background-repeat: no-repeat;
+  background-position: center top 5px;
+  background-size: 55px;
+}
+
+.btn__go-top:hover {
+  background-color: #e6e6e6af;
+  background-image: url("../img/rocket.svg"), url("../img/rocket-fire.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center top 5px, center bottom 5px;
+  background-size: 55px, 12px;
+}
+
+.btn__go-top--show {
+  display: block;
 }
