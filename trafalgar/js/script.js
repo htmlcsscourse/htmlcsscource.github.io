@@ -18,7 +18,6 @@ btnGoTop.addEventListener('click', () => window.scrollTo({
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
-    console.log(1);
     if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
         btnGoTop.classList.add('btn__go-top--show');
     } else {
