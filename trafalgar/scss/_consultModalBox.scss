@@ -1,0 +1,127 @@
+.consult-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.5);
+}
+
+.consult {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative; 
+    width: 320px; 
+    padding: 60px 15px;
+    font-family: $accent-font;
+    text-align: center;
+    border-radius: 10px; 
+    background-color: rgb(230, 244, 255);
+    z-index: 2; 
+
+    &__close-btn {
+        position: absolute;
+        top: 18px;
+        right: 15px;
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+        
+        &:hover::before, 
+        &:hover::after {
+            background-color: rgb(255, 112, 200);
+        }
+        
+        &::before {
+            @extend %close-line;
+            transform: rotate(45deg);
+        }
+        
+        &::after {
+            @extend %close-line;
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__title {
+        font-size: 32px; 
+        font-weight: 800;
+        color: #458ff6;
+        margin-bottom: 10px; 
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 40px;
+    }
+
+
+    &__name,
+    &__phone {
+        width: 100%;
+        position: relative;
+    }
+
+    &__name {
+        &-label {
+            @extend %consult-label;
+            left: 30px;
+            top: -20px;
+        }
+
+        &-input {
+            @extend %consult-input;
+            margin-bottom: 30px;
+        }
+
+        &--validation {
+            opacity: 0;
+            position: absolute;
+            // color: red;
+            // font-size: 14px;
+            // top: -17px;
+            // right: 30px;
+        }
+
+        &-input:placeholder-shown + &-label {
+            opacity: 0;
+            top: -10px;
+        }
+    }
+
+    &__phone {
+        &-label {
+            @extend %consult-label;
+            left: 30px;
+            top: -20px;
+        }
+
+        &-input {
+            @extend %consult-input;
+        }
+
+        &-input:placeholder-shown + &-label {
+            opacity: 0;
+            top: -10px;
+        }
+    }
+
+    &__submit {
+        @extend %button;
+        width: 80%;
+        margin-top: 30px;
+        padding: 10px 30px;
+        border-radius: 0%;
+
+        &:hover {
+            @extend %button-hover;
+        }
+    }
+}
+

@@ -26,47 +26,104 @@ function scrollFunction() {
     }
 }
 
-// Consult today button
+// Modal window for [Consult today] button
 const btnConsultToday = document.querySelector('.header__consult-btn');
 btnConsultToday.addEventListener('click', function () {
-    let modalBackground = document.createElement('div');
-    modalBackground.setAttribute("style", "display: block; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);");
 
-    let modal = document.createElement('div');
-    modal.setAttribute("style", "display: grid; padding: 20px; border-radius: 10px; position: fixed; z-index: 2; left: 50%; transform: translate(-50%, -50%); top: 50%; width: 320px; background-color: rgb(230, 244, 255);");
-    
-    let closeButton = document.createElement('button');
-    closeButton.textContent = 'X';
-    closeButton.setAttribute("style", "justify-self: flex-end; background-color: transparent; border: none; outline: none; cursor: pointer; margin-bottom: 50px");
-    closeButton.addEventListener('click', function(){
-        modal.style.display = "none";
-        modalBackground.style.display = "none";
+    // Wrapper
+    let wrapper = document.createElement('div');
+    wrapper.classList.add('consult-wrapper');
+
+    // Form
+    let form = document.createElement('form');
+    form.classList.add('consult');
+
+    // Close button
+    let closeButton = document.createElement('div');
+    closeButton.classList.add('consult__close-btn');
+    closeButton.addEventListener('click', function () {
+        document.body.removeChild(wrapper);
         document.body.style.overflowY = "auto";
     });
 
+    // Title
     let title = document.createElement('h3');
-    title.innerText = "Fill form";
-    title.setAttribute("style", "text-align: center; margin-bottom: 10px; font-size: 24px; line-height: 32px; font-family: Mulish; font-weight: bold");
+    title.classList.add('consult__title');
+    title.innerText = "Fill the form";
 
+    // Text
     let text = document.createElement('p');
-    text.innerText = "and our managers will call you";
-    text.setAttribute("style", "text-align: center; margin-bottom: 10px; font-size: 18px; line-height: 24px; font-family: Mulish");
+    text.classList.add('consult__text');
+    text.innerText = "And our managers will contact with you soon";
+
+    // Name input
+    let userName = document.createElement('div');
+    userName.classList.add('consult__name');
 
     let inputName = document.createElement('input');
+    inputName.classList.add('consult__name-input');
     inputName.type = "text";
     inputName.name = "name";
-    inputName.placeholder = "Your name";
-    inputName.setAttribute("style", "border: none; outline: none; text-align: center; justify-self: center; width: 80%");
-    
-    
-    
-    
-    modal.appendChild(closeButton);
-    modal.appendChild(title);
-    modal.appendChild(text);
-    modal.appendChild(inputName);
-    document.body.appendChild(modal);
-    document.body.appendChild(modalBackground);
+    inputName.id = "name";
+    inputName.placeholder = "Full name";
+
+    let labelName = document.createElement('label');
+    labelName.classList.add('consult__name-label');
+    labelName.htmlFor = "name";
+    labelName.innerText = "Full name";
+
+    let validationName = document.createElement('span');
+    validationName.classList.add('consult__name--validation');
+    validationName.innerText = "Invalid name";
+
+    userName.appendChild(inputName);
+    userName.appendChild(labelName);
+    userName.appendChild(validationName);
+
+    // Phone input
+    let userPhone = document.createElement('div');
+    userPhone.classList.add('consult__phone');
+
+    let inputPhone = document.createElement('input');
+    inputPhone.classList.add('consult__phone-input');
+    inputPhone.type = "tel";
+    inputPhone.name = "phone";
+    inputPhone.id = "phone";
+    inputPhone.placeholder = "Phone";
+
+    let labelPhone = document.createElement('label');
+    labelPhone.classList.add('consult__phone-label');
+    labelPhone.htmlFor = "phone";
+    labelPhone.innerText = "Phone";
+
+    userPhone.appendChild(inputPhone);
+    userPhone.appendChild(labelPhone);
+
+    // Submit button
+    let submitBtn = document.createElement('button');
+    submitBtn.classList.add('consult__submit');
+    submitBtn.type = "submit";
+    submitBtn.innerText = "Send";
+    submitBtn.addEventListener('click', function () {
+        let name = document.querySelector('.consult__name-input')?.value;
+        let phone = document.querySelector('.consult__phone-input')?.value;
+
+        alert("Name: " + name + " Phone: " + phone);
+    });
+
+    // Append all to form
+    form.appendChild(closeButton);
+    form.appendChild(title);
+    form.appendChild(text);
+    form.appendChild(userName);
+    form.appendChild(userPhone);
+    form.appendChild(submitBtn);
+
+    // Append modal window to wrapper
+    wrapper.appendChild(form);
+
+    // Append wrapper to body
+    document.body.appendChild(wrapper);
     document.body.style.overflowY = "hidden";
 });
 

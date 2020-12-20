@@ -10,11 +10,39 @@
     background-color: transparent;
     outline: none;
     cursor: pointer;
-
     transition: all .3s;
 }
 
 %button-hover {
     background-color: $btn-color;
     color: #fff;
+}
+
+%close-line {
+    content: '';
+    position: absolute;
+    right: 6px;
+    display: inline-block;
+    height: 15px;
+    width: 2px;
+    background-color: #272e32;
+    transition: background-color .3s;
+}
+
+%consult-input {
+    outline: none; 
+    border: none; 
+    justify-self: center; 
+    width: 80%;
+    line-height: 24px;
+    font-size: 18px;
+    padding: 5px 10px;
+
+    
+}
+
+%consult-label {
+    position: absolute;
+    opacity: 1;
+    transition: opacity .3s, top .5s;
 }
