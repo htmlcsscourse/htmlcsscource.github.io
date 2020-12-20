@@ -1,4 +1,4 @@
-.header__bottom-btn, .service__btn, .provider__item-btn, .info__btn {
+.header__consult-btn, .service__btn, .provider__item-btn, .info__btn {
   padding: 18px 0px;
   width: 200px;
   font-weight: bold;
@@ -12,7 +12,7 @@
   transition: all .3s;
 }
 
-.header__bottom-btn:hover, .service__btn:hover, .provider__item-btn:hover, .info__btn:hover {
+.header__consult-btn:hover, .service__btn:hover, .provider__item-btn:hover, .info__btn:hover {
   background-color: #458FF6;
   color: #fff;
 }
@@ -645,7 +645,7 @@ body {
   border: none;
   cursor: pointer;
   transition: all .3s;
-  background-image: url("../img/rocket.svg");
+  background-image: url("../img/goTopButton/rocket.svg");
   background-repeat: no-repeat;
   background-position: center top 5px;
   background-size: 55px;
@@ -653,7 +653,7 @@ body {
 
 .btn__go-top:hover {
   background-color: #e6e6e6af;
-  background-image: url("../img/rocket.svg"), url("../img/rocket-fire.svg");
+  background-image: url("../img/goTopButton/rocket.svg"), url("../img/goTopButton/rocket-fire.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: center top 5px, center bottom 5px;
   background-size: 55px, 12px;

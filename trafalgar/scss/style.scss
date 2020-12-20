@@ -115,6 +115,14 @@ body {
         }
     }
 
+    &__consult-btn {
+        @extend %button;
+
+        &:hover {
+            @extend %button-hover;
+        }
+    }
+
     &__bottom {
         display: flex;
         justify-content: space-between;
@@ -144,14 +152,6 @@ body {
             font-size: 21px;
             line-height: 32px;
             margin-bottom: 45px;
-        }
-
-        &-btn {
-            @extend %button;
-
-            &:hover {
-                @extend %button-hover;
-            }
         }
 
         &-img {
@@ -687,14 +687,14 @@ body {
     cursor: pointer;
     transition: all .3s;
     
-    background-image: url('../img/rocket.svg');
+    background-image: url('../img/goTopButton/rocket.svg');
     background-repeat: no-repeat;
     background-position: center top 5px;
     background-size: 55px;
 
     &:hover {
         background-color: #e6e6e6af;
-        background-image: url('../img/rocket.svg'), url('../img/rocket-fire.svg');
+        background-image: url('../img/goTopButton/rocket.svg'), url('../img/goTopButton/rocket-fire.svg');
         background-repeat: no-repeat, no-repeat;
         background-position: center top 5px, center bottom 5px;
         background-size: 55px, 12px;
