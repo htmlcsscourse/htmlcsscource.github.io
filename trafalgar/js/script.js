@@ -8,7 +8,7 @@ $('.feedback__slider').slick({
 });
 
 //Get the button:
-const btnGoTop = document.getElementsByClassName("btn__go-top")[0];
+let btnGoTop = document.getElementsByClassName("btn__go-top")[0];
 btnGoTop.addEventListener('click', () => window.scrollTo({
     top: 0,
     behavior: 'smooth',
@@ -26,7 +26,7 @@ function scrollFunction() {
 }
 
 // Modal window for [Consult today] button
-const btnConsultToday = document.querySelector('.header__consult-btn');
+let btnConsultToday = document.querySelector('.header__consult-btn');
 btnConsultToday.addEventListener('click', function () {
 
     // Wrapper
@@ -127,7 +127,7 @@ btnConsultToday.addEventListener('click', function () {
 });
 
 // View all button
-const btnViewAll = document.querySelector('.info__btn');
+let btnViewAll = document.querySelector('.info__btn');
 btnViewAll.addEventListener('click', function () {
     const btnClass = 'info__btn--all';
     const itemClass = 'info__item--hide';
